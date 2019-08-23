@@ -16,7 +16,7 @@ extension OperatorCollection {
         name: "Mapping Element",
         operators: [
             SingleOperator<String> (
-                name: "map()s",
+                name: "map()",
                 description: "publisher.map { \"\\($0)\\($0)\" }",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204718-map",
                 operation: { $0.map { "\($0)\($0)" }.eraseToAnyPublisher() },

@@ -7,6 +7,20 @@ extension OperatorCollection {
         name: "Combining Elements from Multiple Publishers",
         operators: [
             TupleOperator<String> (
+                name: "combineLatest()",
+                description: "first.combineLatest(second)",
+                operation: { $0.combineLatest($1).map { $0 + $1 }.eraseToAnyPublisher() },
+                input1: [
+                    .next(10, "A"),
+                    .next(20, "B"),
+                    .finished(70)
+                ],
+                input2: [
+                    .next(60, "1"),
+                    .finished(80)
+                ]
+            ),
+            TupleOperator<String> (
                 name: "merge()",
                 description: "first.merge(second)",
                 operation: { $0.merge(with: $1).eraseToAnyPublisher() },
@@ -20,34 +34,6 @@ extension OperatorCollection {
                     .finished(70)
                 ],
                 input2: [.next(25, "1"), .next(75, "2"), .finished(100)]
-            ),
-            TupleOperator<String> (
-                name: "append()",
-                description: "first.append(second)",
-                operation: { $0.append($1).eraseToAnyPublisher() },
-                input1: [
-                    .next(10, "A"),
-                    .next(20, "B"),
-                    .finished(50)
-                ],
-                input2: [
-                    .next(60, "1"),
-                    .finished(70)
-                ]
-            ),
-            TupleOperator<String> (
-                name: "combineLatest()",
-                description: "first.combineLatest(second)",
-                operation: { $0.combineLatest($1).map { $0 + $1 }.eraseToAnyPublisher() },
-                input1: [
-                    .next(10, "A"),
-                    .next(20, "B"),
-                    .finished(70)
-                ],
-                input2: [
-                    .next(60, "1"),
-                    .finished(80)
-                ]
             ),
             TupleOperator<String> (
                 name: "zip()",

@@ -84,9 +84,7 @@ extension OperatorCollection {
                     .mapError { _ in FailureString(content: "") }
                     .eraseToAnyPublisher() },
                 input: TimedEvent.defaultNumbers
-            ),
-
-
+            )
         ]
     )
 }

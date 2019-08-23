@@ -16,6 +16,7 @@
 		3035CC45230F388900610A4A /* MathematicalOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035CC44230F388900610A4A /* MathematicalOperators.swift */; };
 		3035CC47230F3C8C00610A4A /* SequenceOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035CC46230F3C8C00610A4A /* SequenceOperators.swift */; };
 		3035CC49230FB90200610A4A /* SelectOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035CC48230FB90200610A4A /* SelectOperators.swift */; };
+		3035CC4B230FBEA800610A4A /* MatchingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035CC4A230FBEA800610A4A /* MatchingOperators.swift */; };
 		305BCEA52300B48D0063C458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA42300B48D0063C458 /* AppDelegate.swift */; };
 		305BCEA72300B48D0063C458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA62300B48D0063C458 /* SceneDelegate.swift */; };
 		305BCEA92300B48D0063C458 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA82300B48D0063C458 /* ContentView.swift */; };
@@ -45,6 +46,7 @@
 		3035CC44230F388900610A4A /* MathematicalOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathematicalOperators.swift; sourceTree = "<group>"; };
 		3035CC46230F3C8C00610A4A /* SequenceOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOperators.swift; sourceTree = "<group>"; };
 		3035CC48230FB90200610A4A /* SelectOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOperators.swift; sourceTree = "<group>"; };
+		3035CC4A230FBEA800610A4A /* MatchingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingOperators.swift; sourceTree = "<group>"; };
 		305BCEA12300B48D0063C458 /* CombineMarbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineMarbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305BCEA42300B48D0063C458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305BCEA62300B48D0063C458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				305BCED0230802050063C458 /* TransformOperators.swift */,
 				3035CC46230F3C8C00610A4A /* SequenceOperators.swift */,
 				3035CC48230FB90200610A4A /* SelectOperators.swift */,
+				3035CC4A230FBEA800610A4A /* MatchingOperators.swift */,
 			);
 			path = Operators;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				305BCECC230530BE0063C458 /* Operator.swift in Sources */,
 				305BCED1230802050063C458 /* TransformOperators.swift in Sources */,
 				305BCEC323048AA50063C458 /* SequnceScheduler.swift in Sources */,
+				3035CC4B230FBEA800610A4A /* MatchingOperators.swift in Sources */,
 				305BCEA72300B48D0063C458 /* SceneDelegate.swift in Sources */,
 				305BCEC523052DC50063C458 /* SequanceExperiment.swift in Sources */,
 				305BCECE23073E830063C458 /* CombineOperators.swift in Sources */,

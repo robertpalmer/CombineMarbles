@@ -8,8 +8,8 @@ struct ContentView: View {
         .filter,
         .reduce,
         .mathematical,
+        .matching,
         .sequence,
-        .transforms,
         .select,
         .combine
     ]
