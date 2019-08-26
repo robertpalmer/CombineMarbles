@@ -64,7 +64,7 @@
 		305BCEC823052E490063C458 /* MarblesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarblesScreen.swift; sourceTree = "<group>"; };
 		305BCECB230530BE0063C458 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		305BCECD23073E830063C458 /* CombineOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineOperators.swift; sourceTree = "<group>"; };
-		305BCECF2307E6A60063C458 /* CombineExperiments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CombineExperiments.entitlements; sourceTree = "<group>"; };
+		305BCECF2307E6A60063C458 /* CombineMarbles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CombineMarbles.entitlements; sourceTree = "<group>"; };
 		305BCED0230802050063C458 /* TransformOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformOperators.swift; sourceTree = "<group>"; };
 		305BCED2230BC2890063C458 /* Finished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finished.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +99,7 @@
 		305BCEA32300B48D0063C458 /* CombineMarbles */ = {
 			isa = PBXGroup;
 			children = (
-				305BCECF2307E6A60063C458 /* CombineExperiments.entitlements */,
+				305BCECF2307E6A60063C458 /* CombineMarbles.entitlements */,
 				305BCECA2305306C0063C458 /* Operators */,
 				305BCEB9230347B00063C458 /* Model */,
 				305BCEB8230347A90063C458 /* View */,
@@ -394,7 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CombineExperiments/CombineExperiments.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CombineMarbles/CombineMarbles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "CombineMarbles/Preview\\ Content";
@@ -417,7 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CombineExperiments/CombineExperiments.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CombineMarbles/CombineMarbles.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "CombineMarbles/Preview\\ Content";
