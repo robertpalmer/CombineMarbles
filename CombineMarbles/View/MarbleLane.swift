@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import UIKit
 
 struct ArrowShape: Shape {
 
@@ -24,7 +25,7 @@ struct MarbleLane: View {
             GeometryReader { proxy in
 
                 ArrowShape()
-                    .stroke(Color.black)
+                    .stroke(Color("arrowColor"))
                     .frame(width: proxy.size.width, height: 24)
                     .position(x: proxy.size.width / 2, y: proxy.size.height / 2)
 

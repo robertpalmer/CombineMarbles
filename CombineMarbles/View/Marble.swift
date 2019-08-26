@@ -11,6 +11,7 @@ struct Marble: View {
                 .frame(width: 24, height: 24)
                 .foregroundColor(Color.yellow)
             Text(content ?? "")
+                .foregroundColor(Color("marbleForeground"))
         }
     }
 

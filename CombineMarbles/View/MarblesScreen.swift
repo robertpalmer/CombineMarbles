@@ -85,6 +85,7 @@ struct MarblesScreen: View {
             }
             Text(operation.description)
                 .padding()
+                .font(Font.custom("Menlo", size: 18))
             MarbleLane(pos: $state.output)
                 .frame(height: 44)
                 .padding()
