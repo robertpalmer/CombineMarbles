@@ -48,14 +48,12 @@ class SequnceScheduler: Scheduler {
     }
 
     func schedule(after date: SequnceScheduler.Time, tolerance: Int64, options: String?, _ action: @escaping () -> Void) {
-
         guard now < date else { return }
 
         append(ScheduledAction(time: date, action: action))
     }
 
     func schedule(options: String?, _ action: @escaping () -> Void) {
-
         action()
 //        append(ScheduledAction(time: now, action: action))
     }

@@ -9,7 +9,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "append",
                 description: "publisher.append(\"c\")",
-                operation: { $0.append(["c"]).eraseToAnyPublisher() },
+                operation: { pub, _ in pub.append(["c"]).eraseToAnyPublisher() },
                 input: [
                     .next(10, "A"),
                     .next(20, "B"),
@@ -19,7 +19,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "prepand",
                 description: "publisher.prepand(\"c\")",
-                operation: { $0.prefix(1).eraseToAnyPublisher() },
+                operation: { pub, _ in pub.prefix(1).eraseToAnyPublisher() },
                 input: [
                     .next(10, "A"),
                     .next(20, "B"),
@@ -29,7 +29,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "output",
                 description: "publisher.output(1)",
-                operation: { $0.output(at: 1).eraseToAnyPublisher() },
+                operation: { pub, _ in pub.output(at: 1).eraseToAnyPublisher() },
                 input: [
                     .next(10, "A"),
                     .next(20, "B"),

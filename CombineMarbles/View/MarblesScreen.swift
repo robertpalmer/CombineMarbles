@@ -3,7 +3,7 @@ import Combine
 
 class MarbleViewState: ObservableObject {
 
-    private var generator: ([SequancePublisher]) -> SequanceEqperimentRunner
+    private var generator: ([SequancePublisher], SequnceScheduler) -> SequanceEqperimentRunner
     private var cancellable: Cancellable?
 
     @Published var input: [[TimedEvent]] {
@@ -14,21 +14,16 @@ class MarbleViewState: ObservableObject {
 
     @Published var output: [TimedEvent] = []
 
-    init(input: [[TimedEvent]], generator: @escaping ([SequancePublisher]) -> SequanceEqperimentRunner) {
+    init(input: [[TimedEvent]], generator: @escaping ([SequancePublisher], SequnceScheduler) -> SequanceEqperimentRunner) {
         self.input = input
         self.generator = generator
-
-        update()
     }
-}
-
-private extension MarbleViewState {
 
     func update() {
 
         let scheduler = SequnceScheduler()
 
-        cancellable = generator(self.input.map {SequancePublisher(events: $0, scheduler: scheduler)})
+        cancellable = generator(self.input.map { SequancePublisher(events: $0, scheduler: scheduler) }, scheduler)
             .run(scheduler: scheduler)
             .receive(on: RunLoop.main)
             .assign(to: \.output, on: self)
@@ -41,7 +36,7 @@ extension TupleOperator {
 
         return MarbleViewState(
             input: [input1, input2],
-            generator: { publisher in
+            generator: { publisher, _ in
 
                 
                 let combined = self.operation(publisher[0], publisher[1])
@@ -57,8 +52,8 @@ extension SingleOperator {
 
         return MarbleViewState(
             input: [input],
-            generator: { publisher in
-                let combined = self.operation(publisher[0])
+            generator: { publisher, scheduler in
+                let combined = self.operation(publisher[0], scheduler)
                 return SequanceExperiment(publisher: combined)
             }
         )
@@ -93,6 +88,7 @@ struct MarblesScreen: View {
         }
         .padding()
         .navigationBarTitle(operation.name)
+        .onAppear { self.state.update() }
     }
 }
 

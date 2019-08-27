@@ -11,7 +11,8 @@ struct ContentView: View {
         .matching,
         .sequence,
         .select,
-        .combine
+        .combine,
+        .timing
     ]
 
     var body: some View {

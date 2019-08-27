@@ -19,14 +19,14 @@ extension OperatorCollection {
                 name: "map()",
                 description: "publisher.map { \"\\($0)\\($0)\" }",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204718-map",
-                operation: { $0.map { "\($0)\($0)" }.eraseToAnyPublisher() },
+                operation: { pub, _ in pub.map { "\($0)\($0)" }.eraseToAnyPublisher() },
                 input: TimedEvent.defaultLatters
             ),
             SingleOperator<String> (
                 name: "tryMap()",
                 description: "publisher.tryMap { \"\\($0)\\($0)\" }",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204772-trymap",
-                operation: { $0
+                operation: { pub, _ in pub
                     .tryMap { "\($0)\($0)" }
                     .mapError { _ in FailureString(content: "") }
                     .eraseToAnyPublisher() },
@@ -36,7 +36,7 @@ extension OperatorCollection {
                 name: "scan()",
                 description: "publisher.scan(0) { $0 + $1 }",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3229094-scan",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0) }
                     .scan(0) { $0 + $1 }
                     .map { String($0) }
@@ -47,7 +47,7 @@ extension OperatorCollection {
                 name: "tryScan()",
                 description: "publisher.tryScan(0) { $0 + $1 }",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3229095-tryscan",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0) }
                     .scan(0) { $0 + $1 }
                     .map { String($0) }

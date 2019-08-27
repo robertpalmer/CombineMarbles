@@ -8,7 +8,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "first",
                 description: "publisher.first()",
-                operation: { $0
+                operation: { pub, _ in pub
                     .first()
                     .eraseToAnyPublisher() },
                 input: TimedEvent.defaultNumbers
@@ -16,7 +16,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "first(where:)",
                 description: "publisher.first(where: { $0 > 3 })",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0)}
                     .first(where: { $0 > 3 })
                     .map { String($0) }
@@ -26,7 +26,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "tryFirst(where:)",
                 description: "publisher.tryFirst(where: { $0 > 3 })",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0)}
                     .tryFirst(where: { $0 > 3 })
                     .map { String($0) }
@@ -37,7 +37,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "last",
                 description: "publisher.last()",
-                operation: { $0
+                operation: { pub, _ in pub
                     .last()
                     .eraseToAnyPublisher() },
                 input: TimedEvent.defaultNumbers
@@ -45,7 +45,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "last(where:)",
                 description: "publisher.last(where: { $0 > 3 })",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0)}
                     .last(where: { $0 > 1 })
                     .map { String($0) }
@@ -55,7 +55,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "tryLast(where:)",
                 description: "publisher.tryLast(where: { $0 > 3 })",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0)}
                     .tryFirst(where: { $0 > 1 })
                     .map { String($0) }
@@ -66,7 +66,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "output(at:)",
                 description: "publisher.output(at: 2)",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0)}
                     .output(at: 2)
                     .map { String($0) }
@@ -77,7 +77,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "output<R>(in:)",
                 description: "publisher.output(1..<3)",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0)}
                     .output(in: 1..<3)
                     .map { String($0) }

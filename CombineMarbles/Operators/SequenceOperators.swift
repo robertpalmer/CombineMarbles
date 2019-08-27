@@ -16,7 +16,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "drop(while:)",
                 description: "publisher.drop(while: {$0 < 3 })",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0) }
                     .drop(while: {$0 < 3 })
                     .map { String($0) }
@@ -26,7 +26,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "dropFirst(Int)",
                 description: "publisher.dropFirst(3)",
-                operation: { $0
+                operation: { pub, _ in pub
                     .dropFirst(3)
                     .eraseToAnyPublisher() },
                 input: TimedEvent.defaultNumbers
@@ -34,7 +34,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "append()",
                 description: "publisher.append(\"1\")",
-                operation: { $0.append("1").eraseToAnyPublisher() },
+                operation: { pub, _ in pub.append("1").eraseToAnyPublisher() },
                 input: [
                     .next(10, "A"),
                     .next(20, "B"),
@@ -51,7 +51,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "prepend()",
                 description: "publisher.prepend(\"1\")",
-                operation: { $0.prepend("1").eraseToAnyPublisher() },
+                operation: { pub, _ in pub.prepend("1").eraseToAnyPublisher() },
                 input: [
                     .next(10, "A"),
                     .next(20, "B"),
@@ -76,7 +76,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "prefix(while:)",
                 description: "publisher.prefix(while: {$0 < 3 })",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0) }
                     .prefix(while: {$0 < 3 })
                     .map { String($0) }
@@ -86,7 +86,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "prefix(Int)",
                 description: "publisher.prefix(3)",
-                operation: { $0
+                operation: { pub, _ in pub
                     .prefix(3)
                     .eraseToAnyPublisher() },
                 input: TimedEvent.defaultNumbers
@@ -94,7 +94,7 @@ extension OperatorCollection {
             SingleOperator<String> (
                 name: "tryPrefix(while:)",
                 description: "publisher.tryPrefix(while: {$0 < 3 })",
-                operation: { $0
+                operation: { pub, _ in pub
                     .compactMap { Int($0) }
                     .prefix(while: {$0 < 3 })
                     .map { String($0) }
