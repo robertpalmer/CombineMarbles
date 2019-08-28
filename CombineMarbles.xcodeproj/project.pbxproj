@@ -33,7 +33,6 @@
 		305BCEC923052E490063C458 /* MarblesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEC823052E490063C458 /* MarblesScreen.swift */; };
 		305BCECC230530BE0063C458 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCECB230530BE0063C458 /* Operator.swift */; };
 		305BCECE23073E830063C458 /* CombineOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCECD23073E830063C458 /* CombineOperators.swift */; };
-		305BCED1230802050063C458 /* TransformOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCED0230802050063C458 /* TransformOperators.swift */; };
 		305BCED3230BC28A0063C458 /* Finished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCED2230BC2890063C458 /* Finished.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		305BCECB230530BE0063C458 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		305BCECD23073E830063C458 /* CombineOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineOperators.swift; sourceTree = "<group>"; };
 		305BCECF2307E6A60063C458 /* CombineMarbles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CombineMarbles.entitlements; sourceTree = "<group>"; };
-		305BCED0230802050063C458 /* TransformOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformOperators.swift; sourceTree = "<group>"; };
 		305BCED2230BC2890063C458 /* Finished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finished.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +156,6 @@
 				3035CC44230F388900610A4A /* MathematicalOperators.swift */,
 				305BCECB230530BE0063C458 /* Operator.swift */,
 				3035CC42230F35CA00610A4A /* ReduceOperators.swift */,
-				305BCED0230802050063C458 /* TransformOperators.swift */,
 				3035CC46230F3C8C00610A4A /* SequenceOperators.swift */,
 				3035CC48230FB90200610A4A /* SelectOperators.swift */,
 				3035CC4A230FBEA800610A4A /* MatchingOperators.swift */,
@@ -248,7 +245,6 @@
 				30149059230DF89600AEA679 /* FilterOperators.swift in Sources */,
 				305BCEBD23034ED60063C458 /* SequancePublisher.swift in Sources */,
 				305BCECC230530BE0063C458 /* Operator.swift in Sources */,
-				305BCED1230802050063C458 /* TransformOperators.swift in Sources */,
 				305BCEC323048AA50063C458 /* SequnceScheduler.swift in Sources */,
 				3035CC4B230FBEA800610A4A /* MatchingOperators.swift in Sources */,
 				305BCEA72300B48D0063C458 /* SceneDelegate.swift in Sources */,

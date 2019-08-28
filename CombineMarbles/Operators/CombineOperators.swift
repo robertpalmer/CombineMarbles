@@ -9,6 +9,7 @@ extension OperatorCollection {
             TupleOperator<String> (
                 name: "combineLatest()",
                 description: "first.combineLatest(second)",
+                documentationURL: "https://developer.apple.com/documentation/combine/publisher/3333679-combinelatest",
                 operation: { $0.combineLatest($1).map { $0 + $1 }.eraseToAnyPublisher() },
                 input1: [
                     .next(10, "A"),
@@ -23,6 +24,7 @@ extension OperatorCollection {
             TupleOperator<String> (
                 name: "merge()",
                 description: "first.merge(second)",
+                documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204724-merge",
                 operation: { $0.merge(with: $1).eraseToAnyPublisher() },
                 input1: [
                     .next(10, "A"),
@@ -38,6 +40,7 @@ extension OperatorCollection {
             TupleOperator<String> (
                 name: "zip()",
                 description: "first.zip(second)",
+                documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204779-zip",
                 operation: { $0.zip($1).map { $0 + $1 }.eraseToAnyPublisher() },
                 input1: [
                     .next(10, "A"),

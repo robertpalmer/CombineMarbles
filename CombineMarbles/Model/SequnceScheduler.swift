@@ -54,16 +54,16 @@ class SequnceScheduler: Scheduler {
     }
 
     func schedule(options: String?, _ action: @escaping () -> Void) {
-        action()
-//        append(ScheduledAction(time: now, action: action))
+        append(ScheduledAction(time: now, action: action))
     }
 
     func start() {
-
         guard !scheduled.isEmpty else { return }
 
         let scheduledAction = scheduled.removeFirst()
         now = scheduledAction.time
+
+        scheduledAction.action()
 
         if let interval = scheduledAction.interval {
             let newAction = ScheduledAction(
@@ -76,8 +76,6 @@ class SequnceScheduler: Scheduler {
             append(newAction)
         }
 
-        scheduledAction.action()
-        
         DispatchQueue.main.async { [weak self] in
             self?.start()
         }
