@@ -34,6 +34,8 @@
 		305BCECC230530BE0063C458 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCECB230530BE0063C458 /* Operator.swift */; };
 		305BCECE23073E830063C458 /* CombineOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCECD23073E830063C458 /* CombineOperators.swift */; };
 		305BCED3230BC28A0063C458 /* Finished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCED2230BC2890063C458 /* Finished.swift */; };
+		30E15A2B23172C9A00FF5148 /* WebNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E15A2A23172C9A00FF5148 /* WebNavigator.swift */; };
+		30E15A2D23172CF900FF5148 /* EnvironmentValues+Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E15A2C23172CF900FF5148 /* EnvironmentValues+Navigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		305BCECD23073E830063C458 /* CombineOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineOperators.swift; sourceTree = "<group>"; };
 		305BCECF2307E6A60063C458 /* CombineMarbles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CombineMarbles.entitlements; sourceTree = "<group>"; };
 		305BCED2230BC2890063C458 /* Finished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finished.swift; sourceTree = "<group>"; };
+		30E15A2A23172C9A00FF5148 /* WebNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebNavigator.swift; sourceTree = "<group>"; };
+		30E15A2C23172CF900FF5148 /* EnvironmentValues+Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+Navigator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		305BCEA32300B48D0063C458 /* CombineMarbles */ = {
 			isa = PBXGroup;
 			children = (
+				30E15A2923172C7000FF5148 /* Navigation */,
 				305BCECF2307E6A60063C458 /* CombineMarbles.entitlements */,
 				305BCECA2305306C0063C458 /* Operators */,
 				305BCEB9230347B00063C458 /* Model */,
@@ -162,6 +167,15 @@
 				3035CC4C2315CC2900610A4A /* TimingOperators.swift */,
 			);
 			path = Operators;
+			sourceTree = "<group>";
+		};
+		30E15A2923172C7000FF5148 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				30E15A2A23172C9A00FF5148 /* WebNavigator.swift */,
+				30E15A2C23172CF900FF5148 /* EnvironmentValues+Navigator.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +250,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3035CC47230F3C8C00610A4A /* SequenceOperators.swift in Sources */,
+				30E15A2B23172C9A00FF5148 /* WebNavigator.swift in Sources */,
 				305BCEC12303526C0063C458 /* MarbleLane.swift in Sources */,
 				305BCEBB230347FC0063C458 /* Event.swift in Sources */,
 				305BCEC923052E490063C458 /* MarblesScreen.swift in Sources */,
+				30E15A2D23172CF900FF5148 /* EnvironmentValues+Navigator.swift in Sources */,
 				305BCEA52300B48D0063C458 /* AppDelegate.swift in Sources */,
 				305BCED3230BC28A0063C458 /* Finished.swift in Sources */,
 				3035CC3D230F2B1500610A4A /* MovableView.swift in Sources */,

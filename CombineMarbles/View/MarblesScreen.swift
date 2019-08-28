@@ -63,6 +63,7 @@ extension SingleOperator {
 struct MarblesScreen: View {
 
     @ObservedObject var state: MarbleViewState
+    @Environment(\.navigator) var navigator: WebNavigator?
 
     let operation: Operator
 
@@ -84,6 +85,9 @@ struct MarblesScreen: View {
             MarbleLane(pos: $state.output)
                 .frame(height: 44)
                 .padding()
+            Button(action: {
+                self.navigator?.gotoWebView(url: self.operation.documentationURL)
+            }, label: { Text("Documentation for `\(self.operation.name)` at Apple") })
             Spacer()
         }
         .padding()

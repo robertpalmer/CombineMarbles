@@ -25,7 +25,7 @@ struct ContentView: View {
                         }
                     }
                 }
-            }.navigationBarTitle("Functions")
+            }.navigationBarTitle("Operators")
         }
     }
 }
