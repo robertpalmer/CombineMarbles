@@ -75,14 +75,14 @@ struct MarblesScreen: View {
     var body: some View {
         VStack {
             ForEach(0..<state.input.count) {
-                MarbleLane(pos: self.$state.input[$0])
+                MarbleLane(pos: self.$state.input[$0], isMovable: true)
                     .frame(height: 44)
                     .padding()
             }
             Text(operation.description)
                 .padding()
                 .font(Font.custom("Menlo", size: 18))
-            MarbleLane(pos: $state.output)
+            MarbleLane(pos: $state.output, isMovable: false)
                 .frame(height: 44)
                 .padding()
             Button(action: {
