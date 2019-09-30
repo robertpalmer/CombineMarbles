@@ -74,22 +74,27 @@ struct MarblesScreen: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            ForEach(0..<state.input.count) {
-                MarbleLane(pos: self.$state.input[$0], isDraggable: true)
-                    .frame(height: 44)
-                    .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
-            }
+            VStack {
+                ForEach(0..<state.input.count) {
+                    MarbleLane(pos: self.$state.input[$0], isDraggable: true)
+                        .frame(height: 44)
+                }
+            }.padding(EdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 0))
 
             Text(operation.description)
-                .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+                .padding(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
                 .font(Font.custom("Menlo", size: 16))
 
             MarbleLane(pos: $state.output, isDraggable: false)
                 .frame(height: 44)
-            Button(action: {
-                self.navigator?.gotoWebView(url: self.operation.documentationURL)
-            }, label: { Text("Documentation for \(self.operation.name) at Apple") })
+
+            DocumentationLink(
+                name: self.operation.name,
+                url: self.operation.documentationURL,
+                navigator: self.navigator)
+            .padding(EdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 0))
             Spacer()
+
         }
         .padding()
         .navigationBarTitle(operation.name)

@@ -20,6 +20,7 @@
 		3035CC4D2315CC2900610A4A /* TimingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035CC4C2315CC2900610A4A /* TimingOperators.swift */; };
 		303E3703233A631B0013B78E /* AppearanceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303E3702233A631B0013B78E /* AppearanceSetup.swift */; };
 		303E3705233A95FF0013B78E /* ListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303E3704233A95FF0013B78E /* ListHeader.swift */; };
+		303E37092342A2D20013B78E /* DocumentationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303E37082342A2D20013B78E /* DocumentationLink.swift */; };
 		305BCEA52300B48D0063C458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA42300B48D0063C458 /* AppDelegate.swift */; };
 		305BCEA72300B48D0063C458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA62300B48D0063C458 /* SceneDelegate.swift */; };
 		305BCEA92300B48D0063C458 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA82300B48D0063C458 /* ContentView.swift */; };
@@ -54,6 +55,7 @@
 		3035CC4C2315CC2900610A4A /* TimingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingOperators.swift; sourceTree = "<group>"; };
 		303E3702233A631B0013B78E /* AppearanceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSetup.swift; sourceTree = "<group>"; };
 		303E3704233A95FF0013B78E /* ListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeader.swift; sourceTree = "<group>"; };
+		303E37082342A2D20013B78E /* DocumentationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationLink.swift; sourceTree = "<group>"; };
 		305BCEA12300B48D0063C458 /* CombineMarbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineMarbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305BCEA42300B48D0063C458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305BCEA62300B48D0063C458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				305BCEC823052E490063C458 /* MarblesScreen.swift */,
 				3035CC3C230F2B1500610A4A /* MovableView.swift */,
 				303E3704233A95FF0013B78E /* ListHeader.swift */,
+				303E37082342A2D20013B78E /* DocumentationLink.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				305BCEBB230347FC0063C458 /* Event.swift in Sources */,
 				305BCEC923052E490063C458 /* MarblesScreen.swift in Sources */,
 				303E3703233A631B0013B78E /* AppearanceSetup.swift in Sources */,
+				303E37092342A2D20013B78E /* DocumentationLink.swift in Sources */,
 				30E15A2D23172CF900FF5148 /* EnvironmentValues+Navigator.swift in Sources */,
 				305BCEA52300B48D0063C458 /* AppDelegate.swift in Sources */,
 				305BCED3230BC28A0063C458 /* Finished.swift in Sources */,
