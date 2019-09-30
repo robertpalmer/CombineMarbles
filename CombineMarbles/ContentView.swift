@@ -19,9 +19,10 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(content, id: \.name) { section in
-                    Section(header: Text(section.name)) {
+                    Section(header: ListHeader(text: section.name)) {
                         ForEach(section.operators, id: \.name) {
                             NavigationLink($0.name, destination: MarblesScreen(operation: $0))
+                            .font(Font.custom("Menlo", size: 16))
                         }
                     }
                 }

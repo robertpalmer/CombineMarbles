@@ -51,7 +51,7 @@ extension OperatorCollection {
                 input: TimedEvent.defaultNumbers
             ),
             SingleOperator<String> (
-                name: "traAllSatisfy(_:)",
+                name: "tryAllSatisfy(_:)",
                 description: "publisher.tryAllSatisfy({ $0 < 3})",
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204762-tryallsatisfy",
                 operation: { pub, _ in pub

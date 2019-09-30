@@ -17,7 +17,9 @@ extension OperatorCollection {
         operators: [
             SingleOperator<String> (
                 name: "map()",
-                description: "publisher.map { \"\\($0)\\($0)\" }",
+                description: """
+                publisher.map { \"\\($0)\\($0)\" }
+                """,
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204718-map",
                 operation: { pub, _ in pub.map { "\($0)\($0)" }.eraseToAnyPublisher() },
                 input: TimedEvent.defaultLatters

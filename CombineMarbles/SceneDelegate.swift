@@ -29,6 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             navigator.rootViewController = hostingController
 
             window.rootViewController = hostingController
+
             self.window = window
             window.makeKeyAndVisible()
         }

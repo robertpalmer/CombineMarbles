@@ -18,6 +18,8 @@
 		3035CC49230FB90200610A4A /* SelectOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035CC48230FB90200610A4A /* SelectOperators.swift */; };
 		3035CC4B230FBEA800610A4A /* MatchingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035CC4A230FBEA800610A4A /* MatchingOperators.swift */; };
 		3035CC4D2315CC2900610A4A /* TimingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035CC4C2315CC2900610A4A /* TimingOperators.swift */; };
+		303E3703233A631B0013B78E /* AppearanceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303E3702233A631B0013B78E /* AppearanceSetup.swift */; };
+		303E3705233A95FF0013B78E /* ListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303E3704233A95FF0013B78E /* ListHeader.swift */; };
 		305BCEA52300B48D0063C458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA42300B48D0063C458 /* AppDelegate.swift */; };
 		305BCEA72300B48D0063C458 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA62300B48D0063C458 /* SceneDelegate.swift */; };
 		305BCEA92300B48D0063C458 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCEA82300B48D0063C458 /* ContentView.swift */; };
@@ -50,6 +52,8 @@
 		3035CC48230FB90200610A4A /* SelectOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOperators.swift; sourceTree = "<group>"; };
 		3035CC4A230FBEA800610A4A /* MatchingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingOperators.swift; sourceTree = "<group>"; };
 		3035CC4C2315CC2900610A4A /* TimingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingOperators.swift; sourceTree = "<group>"; };
+		303E3702233A631B0013B78E /* AppearanceSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSetup.swift; sourceTree = "<group>"; };
+		303E3704233A95FF0013B78E /* ListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeader.swift; sourceTree = "<group>"; };
 		305BCEA12300B48D0063C458 /* CombineMarbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineMarbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305BCEA42300B48D0063C458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305BCEA62300B48D0063C458 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303E3701233A58820013B78E /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				303E3702233A631B0013B78E /* AppearanceSetup.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
 		305BCE982300B48C0063C458 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +115,7 @@
 		305BCEA32300B48D0063C458 /* CombineMarbles */ = {
 			isa = PBXGroup;
 			children = (
+				303E3701233A58820013B78E /* Appearance */,
 				30E15A2923172C7000FF5148 /* Navigation */,
 				305BCECF2307E6A60063C458 /* CombineMarbles.entitlements */,
 				305BCECA2305306C0063C458 /* Operators */,
@@ -136,6 +149,7 @@
 				305BCEC02303526C0063C458 /* MarbleLane.swift */,
 				305BCEC823052E490063C458 /* MarblesScreen.swift */,
 				3035CC3C230F2B1500610A4A /* MovableView.swift */,
+				303E3704233A95FF0013B78E /* ListHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,6 +268,7 @@
 				305BCEC12303526C0063C458 /* MarbleLane.swift in Sources */,
 				305BCEBB230347FC0063C458 /* Event.swift in Sources */,
 				305BCEC923052E490063C458 /* MarblesScreen.swift in Sources */,
+				303E3703233A631B0013B78E /* AppearanceSetup.swift in Sources */,
 				30E15A2D23172CF900FF5148 /* EnvironmentValues+Navigator.swift in Sources */,
 				305BCEA52300B48D0063C458 /* AppDelegate.swift in Sources */,
 				305BCED3230BC28A0063C458 /* Finished.swift in Sources */,
@@ -272,6 +287,7 @@
 				305BCEA92300B48D0063C458 /* ContentView.swift in Sources */,
 				3035CC3F230F2B5700610A4A /* ErrorView.swift in Sources */,
 				3035CC4D2315CC2900610A4A /* TimingOperators.swift in Sources */,
+				303E3705233A95FF0013B78E /* ListHeader.swift in Sources */,
 				30149057230DED9400AEA679 /* OperatorCollection.swift in Sources */,
 				3035CC45230F388900610A4A /* MathematicalOperators.swift in Sources */,
 				3035CC41230F2DE400610A4A /* MapOperators.swift in Sources */,

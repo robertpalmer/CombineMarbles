@@ -18,7 +18,7 @@ struct ArrowShape: Shape {
 struct MarbleLane: View {
 
     @Binding var pos: [TimedEvent]
-    let isMovable: Bool
+    let isDraggable: Bool
 
     var body: some View {
         ZStack {
@@ -35,7 +35,7 @@ struct MarbleLane: View {
                             .pos(proxy.denormalize(x: element.pos), y: proxy.size.height / 2)
                             .onPositionChange({
 
-                                guard self.isMovable else { return }
+                                guard self.isDraggable else { return }
                                 if let index = self.pos.firstIndex(of: element) {
                                     self.pos[index].pos = proxy.normalize(x: $0)
                                 }
