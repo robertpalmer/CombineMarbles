@@ -4,7 +4,7 @@ import Combine
 class MarbleViewState: ObservableObject {
 
     private var generator: ([SequancePublisher], SequnceScheduler) -> SequanceEqperimentRunner
-    private var cancellable: Cancellable?
+    private var cancellable = Set<AnyCancellable>()
 
     @Published var input: [[TimedEvent]] {
         didSet {
@@ -23,10 +23,11 @@ class MarbleViewState: ObservableObject {
 
         let scheduler = SequnceScheduler()
 
-        cancellable = generator(self.input.map { SequancePublisher(events: $0, scheduler: scheduler) }, scheduler)
+        generator(self.input.map { SequancePublisher(events: $0, scheduler: scheduler) }, scheduler)
             .run(scheduler: scheduler)
             .receive(on: RunLoop.main)
             .assign(to: \.output, on: self)
+            .store(in: &cancellable)
     }
 }
 
@@ -38,7 +39,6 @@ extension TupleOperator {
             input: [input1, input2],
             generator: { publisher, _ in
 
-                
                 let combined = self.operation(publisher[0], publisher[1])
                 return SequanceExperiment(publisher: combined)
             }
@@ -94,7 +94,6 @@ struct MarblesScreen: View {
                 navigator: self.navigator)
             .padding(EdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 0))
             Spacer()
-
         }
         .padding()
         .navigationBarTitle(operation.name)
