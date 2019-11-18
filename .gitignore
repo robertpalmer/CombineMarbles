@@ -24,3 +24,5 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+node_modules
