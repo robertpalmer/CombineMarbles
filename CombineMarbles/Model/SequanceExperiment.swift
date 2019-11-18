@@ -16,18 +16,23 @@ struct SequanceExperiment<P: Publisher>: SequanceEqperimentRunner where P.Failur
             var collected = [TimedEvent]()
 
             cancellable = self.publisher
-                .sink(receiveCompletion: { _ in
-                    collected.append(.finished(Int(scheduler.now.value / 1000 / 1000)))
+                .sink(receiveCompletion: { result in
+                    let time = Int(scheduler.now.value / 1000 / 1000)
+                    switch result {
+                    case .finished:
+                        collected.append(.finished(time))
+                    case let .failure(failure):
+                        collected.append(.error(time, failure.content))
+                    }
 
                     callback(.success(collected))
 
                     if cancellable != nil {
                         cancellable = nil
                     }
-            }, receiveValue: {
-
-                collected.append(.next(Int(scheduler.now.value / 1000 / 1000), $0))
-            })
+                }, receiveValue: {
+                    collected.append(.next(Int(scheduler.now.value / 1000 / 1000), $0))
+                })
 
             scheduler.start()
         }
