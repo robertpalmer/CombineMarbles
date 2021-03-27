@@ -63,8 +63,7 @@ extension SingleOperator {
 struct MarblesScreen: View {
 
     @ObservedObject var state: MarbleViewState
-    @Environment(\.navigator) var navigator: WebNavigator?
-
+    
     let operation: Operator
 
     init(operation: Operator) {
@@ -90,9 +89,10 @@ struct MarblesScreen: View {
 
             DocumentationLink(
                 name: self.operation.name,
-                url: self.operation.documentationURL,
-                navigator: self.navigator)
-            .padding(EdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 0))
+                url: self.operation.documentationURL
+            )
+            .padding(.top, 16)
+            
             Spacer()
         }
         .padding()

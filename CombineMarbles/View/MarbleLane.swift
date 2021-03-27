@@ -30,19 +30,16 @@ struct MarbleLane: View {
                     .position(x: proxy.size.width / 2, y: proxy.size.height / 2)
 
                 ForEach(self.pos) { element in
-                    Group {
-                        MovableView(element.view)
-                            .pos(proxy.denormalize(x: element.pos), y: proxy.size.height / 2)
-                            .onPositionChange({
-
-                                guard self.isDraggable else { return }
-                                if let index = self.pos.firstIndex(of: element) {
-                                    self.pos[index].pos = proxy.normalize(x: $0)
-                                }
-                            })
-                            .frame(width: 34, height: 34, alignment: .center)
-                            .zIndex(element.zIndex)
-                    }
+                    element.view
+                        .position(x: proxy.denormalize(x: element.pos), y: proxy.size.height / 2)
+                        .gesture(DragGesture().onChanged {
+                            guard self.isDraggable else { return }
+                            if let index = self.pos.firstIndex(of: element) {
+                                self.pos[index].pos = proxy.normalize(x: $0.location.x)
+                            }
+                        })
+                        .frame(width: 34, height: 34, alignment: .center)
+                        .zIndex(element.zIndex)
                 }
             }
         }
@@ -54,7 +51,7 @@ private extension TimedEvent {
     var view: some View {
         switch type {
         case .next:
-            return AnyView(Marble().content(content))
+            return AnyView(Marble(content: content))
         case .finished:
             return AnyView(Finished())
         case .error:

@@ -3,7 +3,7 @@ import SwiftUI
 
 struct Marble: View {
 
-    private var content: String? = nil
+    var content: String? = nil
 
     var body: some View {
         ZStack {
@@ -13,12 +13,6 @@ struct Marble: View {
             Text(content ?? "")
                 .foregroundColor(Color("marbleForeground"))
         }
-    }
-
-    func content(_ content: String?) -> Marble {
-        var copy = self
-        copy.content = content
-        return copy
     }
 
 }

@@ -103,7 +103,7 @@ extension OperatorCollection {
                 documentationURL: "https://developer.apple.com/documentation/combine/publisher/3204748-replaceerror",
                 operation: { pub, _ in pub
                         .replaceError(with: "A")
-                        .mapError { _ in FailureString(content: "")}
+                         .mapError { _ in FailureString(content: "")}
                         .eraseToAnyPublisher() },
                 input: [
                     .next(10, "1"),
