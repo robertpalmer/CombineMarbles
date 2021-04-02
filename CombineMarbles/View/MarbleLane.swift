@@ -25,7 +25,7 @@ struct MarbleLane: View {
             GeometryReader { proxy in
 
                 ArrowShape()
-                    .stroke(Color("arrowColor"))
+                    .stroke(Color.arrowColor)
                     .frame(width: proxy.size.width, height: 24)
                     .position(x: proxy.size.width / 2, y: proxy.size.height / 2)
 
@@ -38,7 +38,7 @@ struct MarbleLane: View {
                                 self.pos[index].pos = proxy.normalize(x: $0.location.x)
                             }
                         })
-                        .frame(width: 34, height: 34, alignment: .center)
+                        .frame(width: 50, height: 50, alignment: .center)
                         .zIndex(element.zIndex)
                 }
             }

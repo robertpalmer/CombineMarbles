@@ -36,6 +36,10 @@
 		305BCECC230530BE0063C458 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCECB230530BE0063C458 /* Operator.swift */; };
 		305BCECE23073E830063C458 /* CombineOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCECD23073E830063C458 /* CombineOperators.swift */; };
 		305BCED3230BC28A0063C458 /* Finished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305BCED2230BC2890063C458 /* Finished.swift */; };
+		308C84FB26123228005DA6F1 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C84FA26123228005DA6F1 /* AboutScreen.swift */; };
+		308C84FE2614D22A005DA6F1 /* Color+Styleguide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C84FD2614D22A005DA6F1 /* Color+Styleguide.swift */; };
+		308C8502261721F6005DA6F1 /* Font+Styleguide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C8501261721F6005DA6F1 /* Font+Styleguide.swift */; };
+		308C850426172AE4005DA6F1 /* about.mov in Resources */ = {isa = PBXBuildFile; fileRef = 308C850326172AE4005DA6F1 /* about.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,10 @@
 		305BCECD23073E830063C458 /* CombineOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineOperators.swift; sourceTree = "<group>"; };
 		305BCECF2307E6A60063C458 /* CombineMarbles.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CombineMarbles.entitlements; sourceTree = "<group>"; };
 		305BCED2230BC2890063C458 /* Finished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finished.swift; sourceTree = "<group>"; };
+		308C84FA26123228005DA6F1 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		308C84FD2614D22A005DA6F1 /* Color+Styleguide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Styleguide.swift"; sourceTree = "<group>"; };
+		308C8501261721F6005DA6F1 /* Font+Styleguide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Styleguide.swift"; sourceTree = "<group>"; };
+		308C850326172AE4005DA6F1 /* about.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = about.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,8 @@
 		305BCEA32300B48D0063C458 /* CombineMarbles */ = {
 			isa = PBXGroup;
 			children = (
+				308C850326172AE4005DA6F1 /* about.mov */,
+				308C84FC2614D20A005DA6F1 /* Styleguide */,
 				303E3701233A58820013B78E /* Appearance */,
 				305BCECF2307E6A60063C458 /* CombineMarbles.entitlements */,
 				305BCECA2305306C0063C458 /* Operators */,
@@ -145,6 +155,7 @@
 				305BCEC823052E490063C458 /* MarblesScreen.swift */,
 				303E3704233A95FF0013B78E /* ListHeader.swift */,
 				303E37082342A2D20013B78E /* DocumentationLink.swift */,
+				308C84FA26123228005DA6F1 /* AboutScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +187,15 @@
 				3035CC4C2315CC2900610A4A /* TimingOperators.swift */,
 			);
 			path = Operators;
+			sourceTree = "<group>";
+		};
+		308C84FC2614D20A005DA6F1 /* Styleguide */ = {
+			isa = PBXGroup;
+			children = (
+				308C84FD2614D22A005DA6F1 /* Color+Styleguide.swift */,
+				308C8501261721F6005DA6F1 /* Font+Styleguide.swift */,
+			);
+			path = Styleguide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308C850426172AE4005DA6F1 /* about.mov in Resources */,
 				305BCEB12300B48F0063C458 /* LaunchScreen.storyboard in Resources */,
 				305BCEAE2300B48F0063C458 /* Preview Assets.xcassets in Resources */,
 				305BCEAB2300B48F0063C458 /* Assets.xcassets in Resources */,
@@ -266,14 +287,17 @@
 				305BCEC523052DC50063C458 /* SequanceExperiment.swift in Sources */,
 				305BCECE23073E830063C458 /* CombineOperators.swift in Sources */,
 				305BCEBF230350C90063C458 /* Marble.swift in Sources */,
+				308C8502261721F6005DA6F1 /* Font+Styleguide.swift in Sources */,
 				3035CC49230FB90200610A4A /* SelectOperators.swift in Sources */,
 				3035CC43230F35CA00610A4A /* ReduceOperators.swift in Sources */,
 				305BCEA92300B48D0063C458 /* ContentView.swift in Sources */,
 				3035CC3F230F2B5700610A4A /* ErrorView.swift in Sources */,
 				3035CC4D2315CC2900610A4A /* TimingOperators.swift in Sources */,
 				303E3705233A95FF0013B78E /* ListHeader.swift in Sources */,
+				308C84FB26123228005DA6F1 /* AboutScreen.swift in Sources */,
 				30149057230DED9400AEA679 /* OperatorCollection.swift in Sources */,
 				3035CC45230F388900610A4A /* MathematicalOperators.swift in Sources */,
+				308C84FE2614D22A005DA6F1 /* Color+Styleguide.swift in Sources */,
 				3035CC41230F2DE400610A4A /* MapOperators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

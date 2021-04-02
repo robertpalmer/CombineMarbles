@@ -3,6 +3,8 @@ import Combine
 
 struct ContentView: View {
 
+    @State var displayHelp: Bool = false
+    
     let content: [OperatorCollection] = [
         .map,
         .filter,
@@ -28,7 +30,14 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Operators")
-        }
+            .toolbar(content: {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("help") { displayHelp = true }
+                }
+            })
+        }.sheet(isPresented: $displayHelp, content: {
+            AboutScreen() { displayHelp = false }
+        })
     }
 }
 
@@ -39,3 +48,15 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 #endif
+
+struct AboutNavigationStyle: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        UIViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        if let navigationController = uiViewController.navigationController {
+            navigationController.navigationBar.backgroundColor = .white
+        }
+    }
+}

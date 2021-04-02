@@ -13,7 +13,8 @@ struct DocumentationLink: View {
                     Text(" Documentation for ") +
                         Text(self.name).font(Font.custom("Menlo-Bold", size: 16))
                     Spacer()
-                    Image(systemName: "chevron.right").foregroundColor(Color.gray)
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.foreground)
                 }.padding(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
             }
             Divider()

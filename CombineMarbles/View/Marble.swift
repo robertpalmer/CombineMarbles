@@ -9,9 +9,9 @@ struct Marble: View {
         ZStack {
             Circle()
                 .frame(width: 44, height: 44)
-                .foregroundColor(Color("navigationBarColor"))
+                .foregroundColor(.navigationBarColor)
             Text(content ?? "")
-                .foregroundColor(Color("marbleForeground"))
+                .foregroundColor(.foreground)
         }
     }
 
